@@ -19,10 +19,10 @@ class Chat extends StatelessWidget {
       ),
       initialRoute: 'welcome',
       routes: {
-        'welcome': (context) => Welcome(),
-        'login': (context) => Login(),
-        'register': (context) => Registration(),
-        'chat': (context) => ChatScreen(),
+        Welcome.id: (context) => Welcome(),
+        Login.id: (context) => Login(),
+        Registration.id: (context) => Registration(),
+        ChatScreen.id: (context) => ChatScreen(),
       },
     );
   }
