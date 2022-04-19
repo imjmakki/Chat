@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
+import 'layout/welcome.dart';
+import 'layout/register.dart';
+import 'layout/login.dart';
+import 'layout/chat.dart';
 
-void main() => runApp(FlashChat());
+void main() => runApp(Chat());
 
-class FlashChat extends StatelessWidget {
+class Chat extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -11,7 +15,7 @@ class FlashChat extends StatelessWidget {
           body1: TextStyle(color: Colors.black54),
         ),
       ),
-      home: WelcomeScreen(),
+      home: Welcome(),
     );
   }
 }
