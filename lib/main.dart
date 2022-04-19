@@ -18,6 +18,7 @@ class Chat extends StatelessWidget {
         ),
       ),
       home: Welcome(),
+      routes: ,
     );
   }
 }
