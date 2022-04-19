@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 class Registration extends StatefulWidget {
+  static const String id = 'register';
   @override
   _RegistrationState createState() => _RegistrationState();
 }

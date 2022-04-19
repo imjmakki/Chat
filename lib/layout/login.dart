@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 class Login extends StatefulWidget {
+  static const String id = 'login';
   @override
   _LoginState createState() => _LoginState();
 }
