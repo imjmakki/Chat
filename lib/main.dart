@@ -17,8 +17,10 @@ class Chat extends StatelessWidget {
           bodyText1: TextStyle(color: Colors.black54),
         ),
       ),
-      home: Welcome(),
-      routes: ,
+      initialRoute: ,
+      routes: {
+        'welcome': (context) => Welcome(),
+      },
     );
   }
 }
