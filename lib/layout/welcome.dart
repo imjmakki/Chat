@@ -19,6 +19,9 @@ class _WelcomeState extends State<Welcome> with SingleTickerProviderStateMixin {
 
     animation = CurvedAnimation(parent: controller, curve: Curves.decelerate);
     controller.forward();
+    animation.addStatusListener((status) {
+      print(status);
+    });
     controller.addListener(() {
       setState(() {});
       print(animation.value);
