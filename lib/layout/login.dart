@@ -7,6 +7,8 @@ class Login extends StatefulWidget {
 }
 
 class _LoginState extends State<Login> {
+  late AnimationController controller;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -17,9 +19,12 @@ class _LoginState extends State<Login> {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
-            Container(
-              height: 200.0,
-              child: Image.asset('images/logo.png'),
+            Hero(
+              tag: 'logo',
+              child: Container(
+                height: 200.0,
+                child: Image.asset('images/logo.png'),
+              ),
             ),
             SizedBox(
               height: 48.0,
