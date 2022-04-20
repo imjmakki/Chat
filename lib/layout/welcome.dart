@@ -18,7 +18,7 @@ class _WelcomeState extends State<Welcome> with SingleTickerProviderStateMixin {
         AnimationController(duration: Duration(seconds: 1), vsync: this);
 
     animation = CurvedAnimation(parent: controller, curve: Curves.decelerate);
-    controller.forward();
+    controller.reverse();
     controller.addListener(() {
       setState(() {});
       print(animation.value);
@@ -41,7 +41,7 @@ class _WelcomeState extends State<Welcome> with SingleTickerProviderStateMixin {
                   tag: 'logo',
                   child: Container(
                     child: Image.asset('images/logo.png'),
-                    height: animation.value,
+                    height: animation.value * 100,
                   ),
                 ),
                 Text(
