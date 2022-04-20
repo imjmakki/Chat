@@ -20,6 +20,7 @@ class _WelcomeState extends State<Welcome> with SingleTickerProviderStateMixin {
 
     controller.forward();
     controller.addListener(() {
+      setState(() {});
       print(controller.value);
     });
   }
@@ -27,7 +28,7 @@ class _WelcomeState extends State<Welcome> with SingleTickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.red.withOpacity(controller.value),
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 24.0),
         child: Column(
