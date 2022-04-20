@@ -10,6 +10,7 @@ class Welcome extends StatefulWidget {
 
 class _WelcomeState extends State<Welcome> with SingleTickerProviderStateMixin {
   late AnimationController controller;
+  late Animation animation;
   @override
   initState() {
     super.initState();
@@ -39,11 +40,11 @@ class _WelcomeState extends State<Welcome> with SingleTickerProviderStateMixin {
                   tag: 'logo',
                   child: Container(
                     child: Image.asset('images/logo.png'),
-                    height: 60.0,
+                    height: controller.value,
                   ),
                 ),
                 Text(
-                  '${controller.value.toInt()}%',
+                  'Flash Chat',
                   style: TextStyle(
                       fontSize: 45.0,
                       fontWeight: FontWeight.w900,
