@@ -43,7 +43,7 @@ class _WelcomeState extends State<Welcome> with SingleTickerProviderStateMixin {
                   ),
                 ),
                 Text(
-                  '${controller.value.toInt()}',
+                  '${controller.value.toInt()}%',
                   style: TextStyle(
                       fontSize: 45.0,
                       fontWeight: FontWeight.w900,
