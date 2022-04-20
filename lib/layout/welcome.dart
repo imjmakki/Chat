@@ -14,9 +14,7 @@ class _WelcomeState extends State<Welcome> with SingleTickerProviderStateMixin {
   initState() {
     super.initState();
     controller = AnimationController(
-      duration: Duration(seconds: 1),
-      vsync: this,
-    );
+        duration: Duration(seconds: 1), vsync: this, upperBound: 100.0);
 
     controller.forward();
     controller.addListener(() {
@@ -28,7 +26,7 @@ class _WelcomeState extends State<Welcome> with SingleTickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.red.withOpacity(controller.value),
+      backgroundColor: Colors.white,
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 24.0),
         child: Column(
@@ -47,9 +45,9 @@ class _WelcomeState extends State<Welcome> with SingleTickerProviderStateMixin {
                 Text(
                   'Flash Chat',
                   style: TextStyle(
-                    fontSize: 45.0,
-                    fontWeight: FontWeight.w900,
-                  ),
+                      fontSize: 45.0,
+                      fontWeight: FontWeight.w900,
+                      color: Colors.black54),
                 ),
               ],
             ),
