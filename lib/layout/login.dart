@@ -11,6 +11,9 @@ class _LoginState extends State<Login> {
   @override
   initState() {
     super.initState();
+    controller = AnimationController(
+      duration:
+    );
   }
 
   @override
