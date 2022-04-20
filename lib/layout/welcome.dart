@@ -8,7 +8,7 @@ class Welcome extends StatefulWidget {
   _WelcomeState createState() => _WelcomeState();
 }
 
-class _WelcomeState extends State<Welcome> {
+class _WelcomeState extends State<Welcome> with SingleTickerProviderStateMixin {
   late AnimationController controller;
   @override
   initState() {
