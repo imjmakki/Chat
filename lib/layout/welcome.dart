@@ -9,6 +9,16 @@ class Welcome extends StatefulWidget {
 }
 
 class _WelcomeState extends State<Welcome> {
+  late AnimationController controller;
+  @override
+  initState() {
+    super.initState();
+    controller = AnimationController(
+      duration: Duration(seconds: 1),
+      vsync: null,
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
