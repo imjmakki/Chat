@@ -34,6 +34,7 @@ class _WelcomeState extends State<Welcome> with SingleTickerProviderStateMixin {
 
   @override
   void dispose() {
+    controller.dispose();
     super.dispose();
   }
 
