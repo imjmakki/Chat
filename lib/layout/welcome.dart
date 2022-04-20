@@ -1,3 +1,4 @@
+import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:chat/layout/login.dart';
 import 'package:chat/layout/register.dart';
 import 'package:flutter/material.dart';
@@ -51,9 +52,9 @@ class _WelcomeState extends State<Welcome> with SingleTickerProviderStateMixin {
                     height: 60.0,
                   ),
                 ),
-                Text(
-                  'Flash Chat',
-                  style: TextStyle(
+                TypewriterAnimatedTextKit(
+                  text: ['Flash Chat'],
+                  textStyle: TextStyle(
                       fontSize: 45.0,
                       fontWeight: FontWeight.w900,
                       color: Colors.black54),
