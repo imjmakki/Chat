@@ -17,15 +17,7 @@ class _WelcomeState extends State<Welcome> with SingleTickerProviderStateMixin {
     controller =
         AnimationController(duration: Duration(seconds: 1), vsync: this);
 
-    animation = CurvedAnimation(parent: controller, curve: Curves.decelerate);
     controller.reverse(from: 1.0);
-    animation.addStatusListener((status) {
-      if (status == AnimationStatus.completed) {
-        controller.reverse(from: 1.0);
-      } else if (status == AnimationStatus.dismissed) {
-        controller.forward();
-      }
-    });
     controller.addListener(() {
       setState(() {});
       print(animation.value);
