@@ -45,7 +45,7 @@ class _WelcomeState extends State<Welcome> {
                 borderRadius: BorderRadius.circular(30.0),
                 child: MaterialButton(
                   onPressed: () {
-                    Navigator.pushNamed(context, Login.id)
+                    Navigator.pushNamed(context, Login.id);
                   },
                   minWidth: 200.0,
                   height: 42.0,
@@ -63,7 +63,7 @@ class _WelcomeState extends State<Welcome> {
                 elevation: 5.0,
                 child: MaterialButton(
                   onPressed: () {
-                    Navigator.pushNamed(context, Registration.id)
+                    Navigator.pushNamed(context, Registration.id);
                   },
                   minWidth: 200.0,
                   height: 42.0,
