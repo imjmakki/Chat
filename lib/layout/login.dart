@@ -8,6 +8,10 @@ class Login extends StatefulWidget {
 
 class _LoginState extends State<Login> {
   late AnimationController controller;
+  @override
+  initState() {
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
