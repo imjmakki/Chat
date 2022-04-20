@@ -15,8 +15,10 @@ class _WelcomeState extends State<Welcome> with SingleTickerProviderStateMixin {
     super.initState();
     controller = AnimationController(
       duration: Duration(seconds: 1),
-      vsync: null,
+      vsync: this,
     );
+
+    controller.forward();
   }
 
   @override
