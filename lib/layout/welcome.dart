@@ -19,6 +19,7 @@ class _WelcomeState extends State<Welcome> with SingleTickerProviderStateMixin {
     );
 
     controller.forward();
+    controller.addListener(() { })
   }
 
   @override
