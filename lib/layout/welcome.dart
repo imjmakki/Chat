@@ -14,14 +14,14 @@ class _WelcomeState extends State<Welcome> with SingleTickerProviderStateMixin {
   @override
   initState() {
     super.initState();
-    controller = AnimationController(
-        duration: Duration(seconds: 1), vsync: this, upperBound: 100.0);
+    controller =
+        AnimationController(duration: Duration(seconds: 1), vsync: this);
 
-    animation = CurvedAnimation(parent: parent, curve: curve)
+    animation = CurvedAnimation(parent: controller, curve: Curves.decelerate);
     controller.forward();
     controller.addListener(() {
       setState(() {});
-      print(controller.value);
+      print(animation.value);
     });
   }
 
@@ -41,7 +41,7 @@ class _WelcomeState extends State<Welcome> with SingleTickerProviderStateMixin {
                   tag: 'logo',
                   child: Container(
                     child: Image.asset('images/logo.png'),
-                    height: controller.value,
+                    height: animation.value,
                   ),
                 ),
                 Text(
