@@ -48,7 +48,7 @@ class _WelcomeState extends State<Welcome> with SingleTickerProviderStateMixin {
                   tag: 'logo',
                   child: Container(
                     child: Image.asset('images/logo.png'),
-                    height: animation.value * 100,
+                    height: 60.0,
                   ),
                 ),
                 Text(
