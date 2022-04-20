@@ -17,8 +17,8 @@ class _WelcomeState extends State<Welcome> with SingleTickerProviderStateMixin {
     controller =
         AnimationController(duration: Duration(seconds: 1), vsync: this);
 
-    animation =
-        ColorTween(begin: Colors.blue, end: Colors.amber).animate(controller);
+    animation = ColorTween(begin: Colors.blueGrey, end: Colors.white)
+        .animate(controller);
     controller.reverse(from: 1.0);
     controller.addListener(() {
       setState(() {});
