@@ -64,7 +64,13 @@ class _WelcomeState extends State<Welcome> with SingleTickerProviderStateMixin {
             SizedBox(
               height: 48.0,
             ),
-            RoundedButton(),
+            RoundedButton(
+              title: 'Log In',
+              colour: Colors.lightBlueAccent,
+              onPressed: () {
+                Navigator.pushNamed(context, Login.id);
+              },
+            ),
             Padding(
               padding: EdgeInsets.symmetric(vertical: 16.0),
               child: Material(
@@ -107,9 +113,7 @@ class RoundedButton extends StatelessWidget {
         color: colour,
         borderRadius: BorderRadius.circular(30.0),
         child: MaterialButton(
-          onPressed: () {
-            Navigator.pushNamed(context, Login.id);
-          },
+          onPressed: onPressed(),
           minWidth: 200.0,
           height: 42.0,
           child: Text(
