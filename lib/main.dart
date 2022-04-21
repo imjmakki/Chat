@@ -1,23 +1,17 @@
+import 'package:chat/layout/chat.dart';
 import 'package:flutter/material.dart';
-import 'layout/welcome.dart';
-import 'layout/register.dart';
+
 import 'layout/login.dart';
-import 'layout/chat.dart';
+import 'layout/register.dart';
+import 'layout/welcome.dart';
 
-void main() => runApp(Chat());
+void main() => runApp(FlashChat());
 
-class Chat extends StatelessWidget {
-  const Chat({Key? key}) : super(key: key);
-
+class FlashChat extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData.dark().copyWith(
-        textTheme: TextTheme(
-          bodyText1: TextStyle(color: Colors.black54),
-        ),
-      ),
-      initialRoute: 'welcome',
+      initialRoute: Welcome.id,
       routes: {
         Welcome.id: (context) => Welcome(),
         Login.id: (context) => Login(),
