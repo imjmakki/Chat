@@ -91,6 +91,10 @@ class _WelcomeState extends State<Welcome> with SingleTickerProviderStateMixin {
 }
 
 class RoundedButton extends StatelessWidget {
+  RoundedButton({})
+
+  final Color colour;
+
   @override
   Widget build(BuildContext context) {
     return Padding(
