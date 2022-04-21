@@ -71,23 +71,12 @@ class _WelcomeState extends State<Welcome> with SingleTickerProviderStateMixin {
                 Navigator.pushNamed(context, Login.id);
               },
             ),
-            Padding(
-              padding: EdgeInsets.symmetric(vertical: 16.0),
-              child: Material(
-                color: Colors.blueAccent,
-                borderRadius: BorderRadius.circular(30.0),
-                elevation: 5.0,
-                child: MaterialButton(
-                  onPressed: () {
-                    Navigator.pushNamed(context, Registration.id);
-                  },
-                  minWidth: 200.0,
-                  height: 42.0,
-                  child: Text(
-                    'Register',
-                  ),
-                ),
-              ),
+            RoundedButton(
+              title: 'Register',
+              colour: Colors.lightBlueAccent,
+              onPressed: () {
+                Navigator.pushNamed(context, Registration.id);
+              },
             ),
           ],
         ),
