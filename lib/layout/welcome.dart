@@ -91,7 +91,8 @@ class _WelcomeState extends State<Welcome> with SingleTickerProviderStateMixin {
 }
 
 class RoundedButton extends StatelessWidget {
-  RoundedButton({})
+  RoundedButton(
+      {required this.colour, required this.title, required this.onPressed});
 
   final Color colour;
   final String title;
