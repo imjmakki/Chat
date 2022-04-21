@@ -73,7 +73,7 @@ class _WelcomeState extends State<Welcome> with SingleTickerProviderStateMixin {
             ),
             RoundedButton(
               title: 'Register',
-              colour: Colors.lightBlueAccent,
+              colour: Colors.blueAccent,
               onPressed: () {
                 Navigator.pushNamed(context, Registration.id);
               },
